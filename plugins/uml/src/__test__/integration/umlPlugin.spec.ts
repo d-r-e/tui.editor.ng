@@ -2,6 +2,7 @@
  * @fileoverview Test uml plugin
  * @author NHN FE Development Lab <dl_javascript@nhn.com>
  */
+import '@testing-library/jest-dom';
 import Editor from '@toast-ui/editor';
 import umlPlugin from '@/index';
 

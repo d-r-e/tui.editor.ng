@@ -34,12 +34,20 @@ function getMdSwitch() {
   return screen.getByText('Markdown')!;
 }
 
+function getMdOnlySwitch() {
+  return screen.getByText('Markdown Only')!;
+}
+
 function getWwSwitch() {
   return screen.getByText('WYSIWYG')!;
 }
 
 function clickMdSwitch() {
   return getMdSwitch().click();
+}
+
+function clickMdOnlySwitch() {
+  return getMdOnlySwitch().click();
 }
 
 function clickWwSwitch() {
@@ -72,6 +80,10 @@ function assertToContainElement(el: HTMLElement) {
   expect(document.body).toContainElement(el);
 }
 
+function getThemeToggleButton() {
+  return screen.getByRole('button', { name: /Dark mode|Light mode/ });
+}
+
 describe('layout component', () => {
   let container: HTMLElement;
   let editor: Editor;
@@ -100,6 +112,7 @@ describe('layout component', () => {
     assertToContainElement(getMdPreview());
     assertToContainElement(getWwEditor());
     assertToContainElement(getMdSwitch());
+    assertToContainElement(getMdOnlySwitch());
     assertToContainElement(getWwSwitch());
   });
 
@@ -195,6 +208,43 @@ describe('layout component', () => {
 
       em.emit('changeMode', 'markdown');
       expect(scrollSyncWrapper).toHaveStyle({ display: 'inline-block' });
+    });
+
+    it('should emit needChangePreviewStyle when clicking markdown only switch', () => {
+      const spy = jest.fn();
+
+      em.listen('needChangePreviewStyle', spy);
+
+      clickMdOnlySwitch();
+
+      expect(spy).toHaveBeenCalledWith('markdown-only');
+    });
+  });
+
+  describe('view customization controls', () => {
+    it('should add markdown-only class to markdown container when selecting markdown-only view', () => {
+      const mdContainer = getElement(`.${cls('md-container')}`);
+
+      clickMdOnlySwitch();
+
+      expect(mdContainer).toHaveClass(`${cls('md')}-markdown-only-style`);
+    });
+
+    it('should toggle to dark theme when clicking the dark mode button', () => {
+      const layout = getElement(`.${cls('defaultUI')}`);
+      const toggle = getThemeToggleButton();
+
+      expect(layout).not.toHaveClass(cls('dark'));
+
+      toggle.click();
+
+      expect(layout).toHaveClass(cls('dark'));
+      expect(toggle).toHaveTextContent('Light mode');
+
+      toggle.click();
+
+      expect(layout).not.toHaveClass(cls('dark'));
+      expect(toggle).toHaveTextContent('Dark mode');
     });
   });
 

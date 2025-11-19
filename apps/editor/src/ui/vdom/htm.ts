@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { assign } from '@/utils/common';
 
 // @TODO: change syntax with our convention

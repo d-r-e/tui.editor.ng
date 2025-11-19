@@ -9,7 +9,7 @@ import { getCustomAttrs } from '@/wysiwyg/helper/node';
 
 import { Emitter } from '@t/event';
 
-type GetPos = (() => number) | boolean;
+type GetPos = (() => number) | boolean | undefined;
 
 type InputPos = {
   top: number;

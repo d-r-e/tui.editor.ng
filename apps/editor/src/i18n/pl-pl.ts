@@ -6,6 +6,9 @@ import Editor from '../editorCore';
 
 Editor.setLanguage(['pl', 'pl-PL'], {
   Markdown: 'Markdown',
+  'Markdown Only': 'Markdown only',
+  'Dark mode': 'Dark mode',
+  'Light mode': 'Light mode',
   WYSIWYG: 'WYSIWYG',
   Write: 'Napisz',
   Preview: 'Podgląd',

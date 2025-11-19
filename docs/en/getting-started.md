@@ -157,7 +157,7 @@ The basic options available are:
 - `height`: Height in string or auto ex) `300px` | `auto`
 - `initialEditType`: Initial type to show `markdown` | `wysiwyg`
 - `initialValue`: Initial value. Set Markdown string
-- `previewStyle`: Preview style of Markdown mode `tab` | `vertical`
+- `previewStyle`: Preview style of Markdown mode `tab` | `vertical` | `markdown-only`
 - `usageStatistics`: Let us know the _hostname_. We want to learn from you how you are using the editor. You are free to disable it. `true` | `false`
 
 Find out more options [here](https://nhn.github.io/tui.editor/latest/ToastUIEditor).

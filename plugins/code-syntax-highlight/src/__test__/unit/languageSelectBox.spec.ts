@@ -6,6 +6,7 @@ import {
 } from '@/nodeViews/languageSelectBox';
 import { cls } from '@/utils/dom';
 import type { Emitter } from '@toast-ui/editor';
+import '@testing-library/jest-dom';
 
 Element.prototype.scrollIntoView = jest.fn();
 

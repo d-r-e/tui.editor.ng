@@ -6,6 +6,9 @@ import Editor from '../editorCore';
 
 Editor.setLanguage('zh-CN', {
   Markdown: 'Markdown',
+  'Markdown Only': 'Markdown only',
+  'Dark mode': 'Dark mode',
+  'Light mode': 'Light mode',
   WYSIWYG: '所见即所得',
   Write: '编辑',
   Preview: '预览',

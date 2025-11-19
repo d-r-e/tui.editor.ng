@@ -199,19 +199,20 @@ export function deepMergedCopy<T1 extends Record<string, any>, T2 extends Record
   obj: T2
 ) {
   const resultObj = { ...targetObj } as T1 & T2;
+  const merged = resultObj as Record<string, any>;
 
   if (targetObj && obj) {
     Object.keys(obj).forEach((prop: keyof T2) => {
       if (isObject(resultObj[prop])) {
         if (Array.isArray(obj[prop])) {
-          resultObj[prop as keyof T1 & T2] = deepCopyArray(obj[prop]);
+          merged[prop as string] = deepCopyArray(obj[prop]);
         } else if (resultObj.hasOwnProperty(prop)) {
           resultObj[prop] = deepMergedCopy(resultObj[prop], obj[prop]);
         } else {
-          resultObj[prop as keyof T1 & T2] = deepCopy(obj[prop]);
+          merged[prop as string] = deepCopy(obj[prop]);
         }
       } else {
-        resultObj[prop as keyof T1 & T2] = obj[prop];
+        merged[prop as string] = obj[prop];
       }
     });
   }

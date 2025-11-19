@@ -38,10 +38,12 @@ import { PluginOptions } from '@t/index';
 import csv from './csv';
 import { trimKeepingTabs, isNumeric, clamp } from './util';
 
+const csvParser = csv as any;
+
 // csv configuration
-csv.IGNORE_QUOTE_WHITESPACE = false;
-csv.IGNORE_RECORD_LENGTH = true;
-csv.DETECT_TYPES = false;
+csvParser.IGNORE_QUOTE_WHITESPACE = false;
+csvParser.IGNORE_RECORD_LENGTH = true;
+csvParser.DETECT_TYPES = false;
 
 const reEOL = /[\n\r]/;
 const reGroupByDelimiter = /([^:]+)?:?(.*)/;
@@ -125,8 +127,8 @@ export function parseToChartData(text: string, delimiter?: string | RegExp) {
   text = trimKeepingTabs(text);
 
   // @ts-ignore
-  csv.COLUMN_SEPARATOR = delimiter || detectDelimiter(text);
-  let dsv: string[][] = csv.parse(text);
+  csvParser.COLUMN_SEPARATOR = delimiter || detectDelimiter(text);
+  let dsv: string[][] = csvParser.parse(text);
 
   // trim all values in 2D array
   dsv = dsv.map((arr) => arr.map((val) => val.trim()));

@@ -78,12 +78,12 @@ function setDevelopConfig(config) {
 
   config.devtool = 'inline-source-map';
   config.devServer = {
-    // https://github.com/webpack/webpack-dev-server/issues/2484
-    injectClient: false,
-    inline: true,
     host: '0.0.0.0',
     port: 8080,
-    disableHostCheck: true,
+    allowedHosts: 'all',
+    static: {
+      directory: path.join(__dirname, 'examples'),
+    },
   };
 }
 

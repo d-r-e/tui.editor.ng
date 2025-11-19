@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowJs": false,
+    "paths": {
+      "@/*": ["src/*"],
+      "@t/*": ["types/*", "../../libs/toastmark/types/*"]
+    }
+  }
+}

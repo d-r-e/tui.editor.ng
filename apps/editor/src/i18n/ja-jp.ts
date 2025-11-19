@@ -6,6 +6,9 @@ import Editor from '../editorCore';
 
 Editor.setLanguage(['ja', 'ja-JP'], {
   Markdown: 'マークダウン',
+  'Markdown Only': 'Markdown only',
+  'Dark mode': 'Dark mode',
+  'Light mode': 'Light mode',
   WYSIWYG: 'WYSIWYG',
   Write: '編集する',
   Preview: 'プレビュー',

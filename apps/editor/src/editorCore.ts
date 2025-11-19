@@ -53,7 +53,7 @@ import { Pos } from '@t/toastmark';
  *     @param {string} [options.height='300px'] - Editor's height style value. Height is applied as border-box ex) '300px', '100%', 'auto'
  *     @param {string} [options.minHeight='200px'] - Editor's min-height style value in pixel ex) '300px'
  *     @param {string} [options.initialValue] - Editor's initial value
- *     @param {string} [options.previewStyle] - Markdown editor's preview style (tab, vertical)
+ *     @param {string} [options.previewStyle] - Markdown editor's preview style (tab, vertical, markdown-only)
  *     @param {boolean} [options.previewHighlight = true] - Highlight a preview element corresponds to the cursor position in the markdown editor
  *     @param {string} [options.initialEditType] - Initial editor type (markdown, wysiwyg)
  *     @param {Object} [options.events] - Events
@@ -295,6 +295,7 @@ class ToastUIEditorCore {
 
   private addInitEvent() {
     this.on('needChangeMode', this.changeMode.bind(this));
+    this.on('needChangePreviewStyle', this.changePreviewStyle.bind(this));
     this.on('loadUI', () => {
       if (this.height !== 'auto') {
         // 75px equals default editor ui height - the editing area height

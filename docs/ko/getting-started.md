@@ -157,7 +157,7 @@ const editor = new Editor({
 - `height`: 에디터 영역의 높기 값. 문자열 값을 가진다. `300px` | `auto`
 - `initialEditType`: 최초로 보여줄 에디터 타입. `markdown` | `wysiwyg`
 - `initialValue`: 콘텐츠 초기값. 반드시 마크다운 문자열 형태여야 한다.
-- `previewStyle`: 마크다운 프리뷰 스타일. `tab` | `vertical`
+- `previewStyle`: 마크다운 프리뷰 스타일. `tab` | `vertical` | `markdown-only`
 - `usageStatistics`: 에디터를 사용하는 웹 사이트의 _호스트명_을 전송한다. 어떠한 사용자가 에디터를 사용하고 있는지 수집하기 위합니다. 이 옵션은 불리언 값을 지정하여 비활성화할 수 있다. `true` | `false`
 
 더 많은 옵션은 [여기](https://nhn.github.io/tui.editor/latest/ToastUIEditor)서 볼 수 있다.

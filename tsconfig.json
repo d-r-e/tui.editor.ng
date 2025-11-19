@@ -12,5 +12,6 @@
     "sourceMap": true,
     "baseUrl": ".",
     "noEmit": true,
+    "types": ["node", "jest", "@testing-library/jest-dom"],
   }
 }

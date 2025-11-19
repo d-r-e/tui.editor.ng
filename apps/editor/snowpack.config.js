@@ -13,4 +13,15 @@ module.exports = {
     '@t': './types',
   },
   workspaceRoot: '../../',
+  packageOptions: {
+    knownEntrypoints: ['prosemirror-commands'],
+    rollup: {
+      plugins: [
+        require('@rollup/plugin-commonjs')({
+          include: /node_modules/,
+          requireReturnsDefault: 'auto',
+        }),
+      ],
+    },
+  },
 };

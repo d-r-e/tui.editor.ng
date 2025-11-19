@@ -143,7 +143,7 @@ export class Toolbar extends Component<Props, State> {
   }
 
   private hiddenScrollSync() {
-    return this.props.editorType === 'wysiwyg' || this.props.previewStyle === 'tab';
+    return this.props.editorType === 'wysiwyg' || this.props.previewStyle !== 'vertical';
   }
 
   private toggleTab = (_: MouseEvent, activeTab: TabType) => {
@@ -319,9 +319,7 @@ export class Toolbar extends Component<Props, State> {
       <div class="${cls('toolbar')}">
         <div
           class="${cls('md-tab-container')}"
-          style="display: ${editorType === 'wysiwyg' || previewStyle === 'vertical'
-            ? 'none'
-            : 'block'}"
+          style="display: ${editorType === 'wysiwyg' || previewStyle !== 'tab' ? 'none' : 'block'}"
         >
           <${Tabs} tabs=${this.tabs} activeTab=${activeTab} onClick=${this.toggleTab} />
         </div>

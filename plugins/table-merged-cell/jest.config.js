@@ -6,5 +6,6 @@ module.exports = {
   testEnvironment: 'jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^@toast-ui/editor$': '<rootDir>/../../apps/editor/src/index.ts',
   },
 };

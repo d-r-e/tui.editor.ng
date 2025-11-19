@@ -8,8 +8,8 @@ module.exports = {
   testEnvironment: 'node',
   setupFilesAfterEnv: [setupFile],
   transform: {
-    '^.+\\.ts$': 'ts-jest',
-    '^.+\\.js$': 'jest-esm-transformer',
+    '^.+\\.ts$': ['ts-jest', { tsconfig: { module: 'commonjs' } }],
+    '^.+\\.js$': 'babel-jest',
     '^.+\\.css$': cssMockFile,
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/'],

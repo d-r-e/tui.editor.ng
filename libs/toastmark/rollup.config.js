@@ -11,6 +11,6 @@ export default [
       format: 'es',
       sourcemap: false,
     },
-    plugins: [typescript(), commonjs(), nodeResolve(), json()],
+    plugins: [typescript({ tsconfig: './tsconfig.build.json' }), commonjs(), nodeResolve(), json()],
   },
 ];

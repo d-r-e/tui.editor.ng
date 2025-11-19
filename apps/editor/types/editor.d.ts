@@ -20,7 +20,7 @@ import { ToolbarItemOptions, IndexList } from './ui';
 import { CommandFn, PluginInfo } from './plugin';
 import { HTMLMdNode } from './markdown';
 
-export type PreviewStyle = 'tab' | 'vertical';
+export type PreviewStyle = 'tab' | 'vertical' | 'markdown-only';
 export type EditorType = 'markdown' | 'wysiwyg';
 export type WidgetStyle = 'top' | 'bottom';
 export interface WidgetRule {

@@ -26,6 +26,7 @@ interface State {
   editorType: EditorType;
   previewStyle: PreviewStyle;
   hide: boolean;
+  lastPreviewStyle: Exclude<PreviewStyle, 'markdown-only'>;
 }
 
 export class Layout extends Component<Props, State> {
@@ -39,6 +40,7 @@ export class Layout extends Component<Props, State> {
       editorType,
       previewStyle,
       hide: false,
+      lastPreviewStyle: previewStyle === 'markdown-only' ? 'vertical' : previewStyle,
     };
     this.addEvent();
   }
@@ -97,7 +99,13 @@ export class Layout extends Component<Props, State> {
           </div>
         </div>
         ${!hideModeSwitch &&
-        html`<${Switch} eventEmitter=${eventEmitter} editorType=${editorType} />`}
+        html`<${Switch}
+          eventEmitter=${eventEmitter}
+          editorType=${editorType}
+          previewStyle=${previewStyle}
+          onPreviewStyleChange=${this.requestPreviewStyleChange}
+          lastPreviewStyle=${this.state.lastPreviewStyle}
+        />`}
         <${ContextMenu} eventEmitter=${eventEmitter} />
       </div>
     `;
@@ -120,7 +128,12 @@ export class Layout extends Component<Props, State> {
 
   private changePreviewStyle = (previewStyle: PreviewStyle) => {
     if (previewStyle !== this.state.previewStyle) {
-      this.setState({ previewStyle });
+      const nextState: Partial<State> = { previewStyle };
+
+      if (previewStyle !== 'markdown-only') {
+        nextState.lastPreviewStyle = previewStyle;
+      }
+      this.setState(nextState);
     }
   };
 
@@ -131,4 +144,9 @@ export class Layout extends Component<Props, State> {
   private show = () => {
     this.setState({ hide: false });
   };
+
+  private requestPreviewStyleChange = (previewStyle: PreviewStyle) => {
+    this.props.eventEmitter.emit('needChangePreviewStyle', previewStyle);
+  };
+
 }

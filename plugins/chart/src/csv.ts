@@ -1,4 +1,5 @@
 /* eslint-disable */
+// @ts-nocheck
 /*
  CSV-JS - A Comma-Separated Values parser for JS
 

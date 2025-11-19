@@ -99,7 +99,7 @@ new Vue({
 | initialEditType | String | 'markdown'                 | Initial editor type (markdown, wysiwyg).                   |
 | options         | Object | following `defaultOptions` | Options of tui.editor. This is for initailize tui.editor. |
 | height          | String | '300px'                    | This prop can control the height of the editor.           |
-| previewStyle          | String | 'vertical'           | Markdown editor's preview style (tab, vertical).           |
+| previewStyle          | String | 'vertical'           | Markdown editor's preview style (tab, vertical, markdown-only).           |
 
 ```js
 const defaultOptions = {

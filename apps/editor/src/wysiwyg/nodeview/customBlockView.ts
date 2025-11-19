@@ -10,7 +10,7 @@ import { ToDOMAdaptor } from '@t/convertor';
 import { createTextSelection } from '@/helper/manipulation';
 import { cls } from '@/utils/dom';
 
-type GetPos = (() => number) | boolean;
+type GetPos = (() => number) | boolean | undefined;
 
 export class CustomBlockView implements NodeView {
   dom: HTMLElement;

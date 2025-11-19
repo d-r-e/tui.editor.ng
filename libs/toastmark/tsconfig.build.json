@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false,
+    "outDir": "./dist/esm",
+    "rootDir": "./src"
+  },
+  "exclude": ["__test__", "__sample__"]
+}

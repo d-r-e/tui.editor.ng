@@ -51,6 +51,8 @@ interface PluginNodeViews {
   [k: string]: PluginNodeVeiwFn;
 }
 
+type NodeViewGetPos = (() => number) | false;
+
 const CONTENTS_CLASS_NAME = cls('contents');
 
 export default class WysiwygEditor extends EditorBase {
@@ -140,13 +142,19 @@ export default class WysiwygEditor extends EditorBase {
       },
       nodeViews: {
         customBlock(node, view, getPos) {
-          return new CustomBlockView(node, view, getPos, toDOMAdaptor);
+          const resolvedGetPos = ((getPos as unknown as (() => number) | undefined) ?? false) as NodeViewGetPos;
+
+          return new CustomBlockView(node, view, resolvedGetPos, toDOMAdaptor);
         },
         image(node, view, getPos) {
-          return new ImageView(node, view, getPos, eventEmitter);
+          const resolvedGetPos = ((getPos as unknown as (() => number) | undefined) ?? false) as NodeViewGetPos;
+
+          return new ImageView(node, view, resolvedGetPos, eventEmitter);
         },
         codeBlock(node, view, getPos) {
-          return new CodeBlockView(node, view, getPos, eventEmitter);
+          const resolvedGetPos = ((getPos as unknown as (() => number) | undefined) ?? false) as NodeViewGetPos;
+
+          return new CodeBlockView(node, view, resolvedGetPos, eventEmitter);
         },
         widget: widgetNodeView,
         ...this.createPluginNodeViews(),
