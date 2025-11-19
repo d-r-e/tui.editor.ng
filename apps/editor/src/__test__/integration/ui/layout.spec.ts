@@ -80,10 +80,6 @@ function assertToContainElement(el: HTMLElement) {
   expect(document.body).toContainElement(el);
 }
 
-function getThemeToggleButton() {
-  return screen.getByRole('button', { name: /Dark mode|Light mode/ });
-}
-
 describe('layout component', () => {
   let container: HTMLElement;
   let editor: Editor;
@@ -228,23 +224,6 @@ describe('layout component', () => {
       clickMdOnlySwitch();
 
       expect(mdContainer).toHaveClass(`${cls('md')}-markdown-only-style`);
-    });
-
-    it('should toggle to dark theme when clicking the dark mode button', () => {
-      const layout = getElement(`.${cls('defaultUI')}`);
-      const toggle = getThemeToggleButton();
-
-      expect(layout).not.toHaveClass(cls('dark'));
-
-      toggle.click();
-
-      expect(layout).toHaveClass(cls('dark'));
-      expect(toggle).toHaveTextContent('Light mode');
-
-      toggle.click();
-
-      expect(layout).not.toHaveClass(cls('dark'));
-      expect(toggle).toHaveTextContent('Dark mode');
     });
   });
 

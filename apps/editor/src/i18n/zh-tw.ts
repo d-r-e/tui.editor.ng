@@ -7,8 +7,6 @@ import Editor from '../editorCore';
 Editor.setLanguage('zh-TW', {
   Markdown: 'Markdown',
   'Markdown Only': 'Markdown only',
-  'Dark mode': 'Dark mode',
-  'Light mode': 'Light mode',
   WYSIWYG: '所見即所得',
   Write: '編輯',
   Preview: '預覽',

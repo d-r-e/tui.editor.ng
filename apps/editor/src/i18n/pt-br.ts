@@ -7,8 +7,6 @@ import Editor from '../editorCore';
 Editor.setLanguage(['pt', 'pt-BR'], {
   Markdown: 'Markdown',
   'Markdown Only': 'Markdown only',
-  'Dark mode': 'Dark mode',
-  'Light mode': 'Light mode',
   WYSIWYG: 'WYSIWYG',
   Write: 'Escrever',
   Preview: 'Pré-visualizar',

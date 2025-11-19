@@ -7,8 +7,6 @@ import Editor from '../editorCore';
 Editor.setLanguage(['ko', 'ko-KR'], {
   Markdown: '마크다운',
   'Markdown Only': 'Markdown only',
-  'Dark mode': 'Dark mode',
-  'Light mode': 'Light mode',
   WYSIWYG: '위지윅',
   Write: '편집하기',
   Preview: '미리보기',
