@@ -1,9 +1,9 @@
 .toastui-editor-md-heading1 {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .toastui-editor-md-heading2 {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .toastui-editor-md-heading3 {
@@ -30,7 +30,7 @@
 .toastui-editor-md-heading,
 .toastui-editor-md-list-item-style,
 .toastui-editor-md-list-item .toastui-editor-md-meta {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .toastui-editor-md-emph {
@@ -50,61 +50,61 @@
 .toastui-editor-md-link,
 .toastui-editor-md-table,
 .toastui-editor-md-block-quote {
-  color: #ccc;
+  color: #d1d5db;
 }
 
 .toastui-editor-md-code.toastui-editor-md-delimiter {
-  color: #aaa;
+  color: #9ca3af;
 }
 
 .toastui-editor-md-meta,
 .toastui-editor-md-html,
 .toastui-editor-md-link.toastui-editor-md-link-url.toastui-editor-md-marked-text {
-  color: #999;
+  color: #6b7280;
 }
 
 .toastui-editor-md-block-quote .toastui-editor-md-marked-text,
 .toastui-editor-md-list-item .toastui-editor-md-meta {
-  color: #555;
+  color: #374151;
 }
 
 .toastui-editor-md-table .toastui-editor-md-table-cell {
-  color: #222;
+  color: #111827;
 }
 
 .toastui-editor-md-link.toastui-editor-md-link-desc.toastui-editor-md-marked-text,
 .toastui-editor-md-list-item-style.toastui-editor-md-list-item-odd {
-  color: #4b96e6;
+  color: #2563eb;
 }
 
 .toastui-editor-md-list-item-style.toastui-editor-md-list-item-even {
-  color: #cb4848;
+  color: #dc2626;
 }
 
 .toastui-editor-md-code.toastui-editor-md-marked-text {
-  color: #c1798b;
+  color: #dc2626;
 }
 
 .toastui-editor-md-code {
-  background-color: rgba(243, 229, 233, 0.5);
+  background-color: rgba(254, 242, 242, 0.8);
   padding: 2px 0;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.02em;
 }
 
 .toastui-editor-md-code.toastui-editor-md-start {
-  padding-left: 2px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  padding-left: 3px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .toastui-editor-md-code.toastui-editor-md-end {
-  padding-right: 2px;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  padding-right: 3px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .toastui-editor-md-code-block-line-background {
-  background-color: #f5f7f8;
+  background-color: #f9fafb;
 }
 
 .toastui-editor-md-code-block-line-background.start,
@@ -119,14 +119,14 @@
 }
 
 .toastui-editor-md-custom-block {
-  color: #452d6b;
+  color: #6b21a8;
 }
 .toastui-editor-md-custom-block-line-background {
-  background-color: #f9f7fd;
+  background-color: #f5f3ff;
 }
 .toastui-editor-md-custom-block .toastui-editor-md-delimiter {
-  color: #b8b3c0;
+  color: #c4b5fd;
 }
 .toastui-editor-md-custom-block .toastui-editor-md-meta {
-  color: #5200d0;
+  color: #7c3aed;
 }

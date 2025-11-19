@@ -59,6 +59,45 @@ function createScrollSyncToolbarItem(): ToolbarItemInfo {
   };
 }
 
+function createHeightToggleToolbarItem(): ToolbarItemInfo {
+  const button = document.createElement('button');
+  let heightState: 'min' | 'medium' | 'full' = 'min';
+
+  button.type = 'button';
+  button.className = `${cls('toolbar-icons')} height-toggle`;
+  button.setAttribute('aria-label', 'Toggle editor height');
+  button.title = 'Toggle editor height';
+  
+  const updateButtonState = () => {
+    button.className = `${cls('toolbar-icons')} height-toggle height-${heightState}`;
+  };
+  
+  updateButtonState();
+
+  const onMounted = (execCommand: ExecCommand) => {
+    button.addEventListener('click', () => {
+      // Cycle through states: min -> medium -> full -> min
+      if (heightState === 'min') {
+        heightState = 'medium';
+        execCommand('setHeight', { height: 'medium' });
+      } else if (heightState === 'medium') {
+        heightState = 'full';
+        execCommand('setHeight', { height: 'full' });
+      } else {
+        heightState = 'min';
+        execCommand('setHeight', { height: 'min' });
+      }
+      updateButtonState();
+    });
+  };
+
+  return {
+    name: 'height',
+    el: button,
+    onMounted,
+  };
+}
+
 function createDefaultToolbarItemInfo(type: string) {
   let info!: ToolbarButtonInfo | ToolbarCustomOptions;
 
@@ -204,6 +243,9 @@ function createDefaultToolbarItemInfo(type: string) {
       break;
     case 'scrollSync':
       info = createScrollSyncToolbarItem();
+      break;
+    case 'height':
+      info = createHeightToggleToolbarItem();
       break;
     case 'more':
       info = {

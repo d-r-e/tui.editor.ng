@@ -9,15 +9,16 @@
   font-family: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Helvetica Neue', 'Helvetica', 'Arial', '나눔바른고딕', 'Nanum Barun Gothic', '맑은고딕', 'Malgun Gothic',
     sans-serif;
-  color: #222;
-  font-size: 13px;
+  color: #111827;
+  font-size: 15px;
+  line-height: 1.7;
   overflow-y: auto;
   overflow-X: hidden;
   height: calc(100% - 36px);
 }
 
 .ProseMirror .placeholder {
-  color: #999;
+  color: #9ca3af;
 }
 
 .ProseMirror:focus {
@@ -29,19 +30,20 @@
 }
 
 table.ProseMirror-selectednode {
-  border-radius: 2px;
-  outline: 2px solid #00a9ff;
+  border-radius: 4px;
+  outline: 2px solid #2563eb;
 }
 
 .html-block.ProseMirror-selectednode {
-  border-radius: 2px;
-  outline: 2px solid #00a9ff;
+  border-radius: 4px;
+  outline: 2px solid #2563eb;
 }
 
 .toastui-editor-contents {
   margin: 0;
   padding: 0;
-  font-size: 13px;
+  font-size: 15px;
+  line-height: 1.7;
   font-family: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Helvetica Neue', 'Helvetica', 'Arial', '나눔바른고딕', 'Nanum Barun Gothic', '맑은고딕', 'Malgun Gothic',
     sans-serif;
@@ -49,7 +51,7 @@ table.ProseMirror-selectednode {
 }
 
 .toastui-editor-contents *:not(table) {
-  line-height: 160%;
+  line-height: 1.7;
   box-sizing: content-box;
 }
 
@@ -68,7 +70,7 @@ table.ProseMirror-selectednode {
 
 .toastui-editor-contents p {
   margin: 10px 0;
-  color: #222;
+  color: #111827;
 }
 
 .toastui-editor-contents > h1:first-of-type,
@@ -82,70 +84,66 @@ table.ProseMirror-selectednode {
 .toastui-editor-contents h4,
 .toastui-editor-contents h5,
 .toastui-editor-contents h6 {
-  font-weight: bold;
-  color: #222;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: -0.02em;
 }
 
 .toastui-editor-contents h1 {
-  font-size: 24px;
-  line-height: 28px;
-  border-bottom: 3px double #999;
-  margin: 52px 0 15px 0;
-  padding-bottom: 7px;
+  font-size: 28px;
+  line-height: 1.3;
+  border-bottom: 2px solid #e5e7eb;
+  margin: 52px 0 20px 0;
+  padding-bottom: 12px;
 }
 
 .toastui-editor-contents h2 {
-  font-size: 22px;
-  line-height: 23px;
-  border-bottom: 1px solid #dbdbdb;
-  margin: 20px 0 13px 0;
-  padding-bottom: 7px;
+  font-size: 24px;
+  line-height: 1.35;
+  border-bottom: 1px solid #e5e7eb;
+  margin: 32px 0 16px 0;
+  padding-bottom: 8px;
 }
 
 .toastui-editor-contents h3 {
   font-size: 20px;
-  margin: 18px 0 2px;
+  line-height: 1.4;
+  margin: 24px 0 12px;
 }
 
 .toastui-editor-contents h4 {
   font-size: 18px;
-  margin: 10px 0 2px;
-}
-
-.toastui-editor-contents h3,
-.toastui-editor-contents h4 {
-  line-height: 18px;
+  line-height: 1.45;
+  margin: 20px 0 10px;
 }
 
 .toastui-editor-contents h5 {
   font-size: 16px;
+  line-height: 1.5;
+  margin: 16px 0 8px;
 }
 
 .toastui-editor-contents h6 {
   font-size: 14px;
-}
-
-.toastui-editor-contents h5,
-.toastui-editor-contents h6 {
-  line-height: 17px;
-  margin: 9px 0 -4px;
+  line-height: 1.5;
+  margin: 16px 0 8px;
 }
 
 .toastui-editor-contents del {
-  color: #999;
+  color: #6b7280;
 }
 
 .toastui-editor-contents blockquote {
-  margin: 14px 0;
-  border-left: 4px solid #e5e5e5;
-  padding: 0 16px;
-  color: #999;
+  margin: 16px 0;
+  border-left: 3px solid #d1d5db;
+  padding: 2px 20px;
+  color: #6b7280;
 }
 
 .toastui-editor-contents blockquote p,
 .toastui-editor-contents blockquote ul,
 .toastui-editor-contents blockquote ol {
-  color: #999;
+  color: #6b7280;
 }
 
 .toastui-editor-contents blockquote > :first-child {
@@ -165,17 +163,20 @@ table.ProseMirror-selectednode {
 }
 
 .toastui-editor-contents pre {
-  margin: 2px 0 8px;
-  padding: 18px;
-  background-color: #f4f7f8;
+  margin: 16px 0;
+  padding: 16px 20px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
 }
 
 .toastui-editor-contents code {
-  color: #c1798b;
-  background-color: #f9f2f4;
-  padding: 2px 3px;
-  letter-spacing: -0.3px;
-  border-radius: 2px;
+  color: #dc2626;
+  background-color: #fef2f2;
+  padding: 3px 6px;
+  letter-spacing: -0.02em;
+  border-radius: 4px;
+  font-size: 0.9em;
 }
 
 .toastui-editor-contents pre code {
@@ -193,31 +194,33 @@ table.ProseMirror-selectednode {
 }
 
 .toastui-editor-contents table {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 12px 0 14px;
-  color: #222;
+  border: 1px solid #d1d5db;
+  margin: 16px 0 20px;
+  color: #111827;
   width: auto;
   border-collapse: collapse;
   box-sizing: border-box;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .toastui-editor-contents table th,
 .toastui-editor-contents table td {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 5px 14px 5px 12px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 16px;
   height: 32px;
 }
 
 .toastui-editor-contents table th {
-  background-color: #555;
-  font-weight: 300;
-  color: #fff;
-  padding-top: 6px;
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  padding-top: 10px;
 }
 
 .toastui-editor-contents th p {
   margin: 0;
-  color: #fff;
+  color: #374151;
 }
 
 .toastui-editor-contents td p {
@@ -226,11 +229,11 @@ table.ProseMirror-selectednode {
 }
 
 .toastui-editor-contents td.toastui-editor-cell-selected {
-  background-color: #d8dfec;
+  background-color: #dbeafe;
 }
 
 .toastui-editor-contents th.toastui-editor-cell-selected {
-  background-color: #908f8f;
+  background-color: #e0e7ff;
 }
 
 .toastui-editor-contents ul,
@@ -239,9 +242,9 @@ table.ProseMirror-selectednode {
 .toastui-editor-contents dir {
   display: block;
   list-style-type: none;
-  padding-left: 24px;
-  margin: 6px 0 10px;
-  color: #222;
+  padding-left: 28px;
+  margin: 8px 0 12px;
+  color: #111827;
 }
 
 .toastui-editor-contents ol {
@@ -261,12 +264,12 @@ table.ProseMirror-selectednode {
 
 .toastui-editor-contents ul > li::before {
   content: '';
-  margin-top: 6px;
-  margin-left: -17px;
+  margin-top: 8px;
+  margin-left: -18px;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #9ca3af;
 }
 
 .toastui-editor-contents ol > li::before {
@@ -275,7 +278,8 @@ table.ProseMirror-selectednode {
   width: 24px;
   text-align: right;
   direction: rtl;
-  color: #aaa;
+  color: #6b7280;
+  font-weight: 500;
 }
 
 .toastui-editor-contents ul ul,
@@ -297,17 +301,20 @@ table.ProseMirror-selectednode {
 }
 
 .toastui-editor-contents hr {
-  border-top: 1px solid #eee;
-  margin: 16px 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 24px 0;
 }
 
 .toastui-editor-contents a {
   text-decoration: underline;
-  color: #4b96e6;
+  color: #2563eb;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 .toastui-editor-contents a:hover {
-  color: #1f70de;
+  color: #1d4ed8;
 }
 
 .toastui-editor-contents .image-link {
@@ -321,10 +328,10 @@ table.ProseMirror-selectednode {
   height: 30px;
   right: 0px;
   border-radius: 50%;
-  border: 1px solid #c9ccd5;
+  border: 1px solid #d1d5db;
   background: #fff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KICAgICAgICA8ZyBzdHJva2U9IiM1NTUiIHN0cm9rZS13aWR0aD0iMS41Ij4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNy42NjUgMTUuMDdsLTEuODE5LS4wMDJjLTEuNDg2IDAtMi42OTItMS4yMjgtMi42OTItMi43NDR2LS4xOTJjMC0xLjUxNSAxLjIwNi0yLjc0NCAyLjY5Mi0yLjc0NGgzLjg0NmMxLjQ4NyAwIDIuNjkyIDEuMjI5IDIuNjkyIDIuNzQ0di4xOTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDAwIC00NTgxKSB0cmFuc2xhdGUoOTk1IDQ1NzYpIHRyYW5zbGF0ZSg1IDUpIHNjYWxlKDEgLTEpIHJvdGF0ZSg0NSAzNy4yOTMgMCkiLz4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTIuMzI2IDQuOTM0bDEuODIyLjAwMmMxLjQ4NyAwIDIuNjkzIDEuMjI4IDIuNjkzIDIuNzQ0di4xOTJjMCAxLjUxNS0xLjIwNiAyLjc0NC0yLjY5MyAyLjc0NGgtMy44NDVjLTEuNDg3IDAtMi42OTItMS4yMjktMi42OTItMi43NDRWNy42OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwMDAgLTQ1ODEpIHRyYW5zbGF0ZSg5OTUgNDU3NikgdHJhbnNsYXRlKDUgNSkgc2NhbGUoMSAtMSkgcm90YXRlKDQ1IDMwLjk5NiAwKSIvPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K') no-repeat;
   background-position: center;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
@@ -357,19 +364,20 @@ table.ProseMirror-selectednode {
 }
 
 .toastui-editor-custom-block .toastui-editor-custom-block-editor {
-  background: #f9f7fd;
-  color: #452d6b;
-  border: solid 1px #dbd4ea;
+  background: #f5f3ff;
+  color: #6b21a8;
+  border: solid 1px #e9d5ff;
+  border-radius: 6px;
 }
 
 .toastui-editor-custom-block .toastui-editor-custom-block-view {
   position: relative;
-  padding: 9px 13px 8px 12px;
+  padding: 10px 14px;
 }
 
 .toastui-editor-custom-block.ProseMirror-selectednode .toastui-editor-custom-block-view {
-  border: solid 1px #dbd4ea;
-  border-radius: 2px;
+  border: solid 1px #e9d5ff;
+  border-radius: 6px;
 }
 
 .toastui-editor-custom-block .toastui-editor-custom-block-view .tool {
@@ -389,17 +397,24 @@ table.ProseMirror-selectednode {
   height: 15px;
   margin-left: 8px;
   padding: 3px;
-  border: solid 1px #cccccc;
+  border: solid 1px #d1d5db;
+  border-radius: 4px;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuugiOydtOyWtF8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiCgkgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAgMzAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwIDMwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6IzU1NTU1NTt9Cjwvc3R5bGU+CjxnPgoJPGc+CgkJPGc+CgkJCTxnPgoJCQkJPGc+CgkJCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE1LjUsMTIuNWwyLDJMMTIsMjBoLTJ2LTJMMTUuNSwxMi41eiBNMTgsMTBsMiwybC0xLjUsMS41bC0yLTJMMTgsMTB6Ii8+CgkJCQk8L2c+CgkJCTwvZz4KCQk8L2c+Cgk8L2c+CjwvZz4KPC9zdmc+Cg==')
     no-repeat;
   background-position: center;
   background-size: 30px 30px;
+  transition: all 0.15s ease;
+}
+
+.toastui-editor-custom-block-view button:hover {
+  border-color: #9ca3af;
+  background-color: #f9fafb;
 }
 
 .toastui-editor-custom-block-view .info {
   font-size: 13px;
-  font-weight: bold;
-  color: #5200d0;
+  font-weight: 600;
+  color: #7c3aed;
   vertical-align: middle;
 }
 
@@ -414,13 +429,13 @@ table.ProseMirror-selectednode {
   top: 10px;
   right: 10px;
   height: 24px;
-  padding: 3px 35px 0 10px;
-  font-weight: bold;
-  font-size: 13px;
-  color: #333;
-  background: #e5e9ea url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuugiOydtOyWtF8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiCgkgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAgMzAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwIDMwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6IzU1NTU1NTt9Cjwvc3R5bGU+CjxnPgoJPGc+CgkJPGc+CgkJCTxnPgoJCQkJPGc+CgkJCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE1LjUsMTIuNWwyLDJMMTIsMjBoLTJ2LTJMMTUuNSwxMi41eiBNMTgsMTBsMiwybC0xLjUsMS41bC0yLTJMMTgsMTB6Ii8+CgkJCQk8L2c+CgkJCTwvZz4KCQk8L2c+Cgk8L2c+CjwvZz4KPC9zdmc+Cg==') no-repeat;
+  padding: 4px 35px 0 12px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #374151;
+  background: #e5e7eb url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuugiOydtOyWtF8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiCgkgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzAgMzAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwIDMwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6IzU1NTU1NTt9Cjwvc3R5bGU+CjxnPgoJPGc+CgkJPGc+CgkJCTxnPgoJCQkJPGc+CgkJCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE1LjUsMTIuNWwyLDJMMTIsMjBoLTJ2LTJMMTUuNSwxMi41eiBNMTgsMTBsMiwybC0xLjUsMS41bC0yLTJMMTgsMTB6Ii8+CgkJCQk8L2c+CgkJCTwvZz4KCQk8L2c+Cgk8L2c+CjwvZz4KPC9zdmc+Cg==') no-repeat;
   background-position: right;
-  border-radius: 2px;
+  border-radius: 4px;
   background-size: 30px 30px;
   cursor: pointer;
 }
@@ -431,10 +446,11 @@ table.ProseMirror-selectednode {
   width: 100px;
   height: 27px;
   right: 35px;
-  border: 1px solid #ccc;
-  border-radius: 2px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
   background-color: #fff;
   z-index: 30;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .toastui-editor-ww-code-block-language input {
@@ -450,8 +466,8 @@ table.ProseMirror-selectednode {
 
 .toastui-editor-contents-placeholder::before {
   content: attr(data-placeholder);
-  color: grey;
-  line-height: 160%;
+  color: #9ca3af;
+  line-height: 1.7;
   position: absolute;
 }
 

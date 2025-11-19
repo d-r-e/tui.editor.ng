@@ -29,12 +29,21 @@
     <!-- Editor -->
     <script src="../dist/cdn/toastui-editor-all.js"></script>
     <script type="text/babel" class="code-js">
-      const editor = new toastui.Editor({
+      let editor = new toastui.Editor({
         el: document.querySelector('#editor'),
-        previewStyle: 'vertical',
         height: '500px',
-        initialValue: content
+        initialValue: content,
+        previewStyle: 'vertical',
+  toolbarItems: [
+    ['heading', 'bold', 'italic', 'strike'],
+    ['hr', 'quote'],
+    ['ul', 'ol', 'task', 'indent', 'outdent'],
+    ['table', 'image', 'link'],
+    ['code', 'codeblock'],
+    ['scrollSync', 'height']
+  ]
       });
+
     </script>
   </body>
 </html>

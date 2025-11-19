@@ -321,6 +321,32 @@ class ToastUIEditorCore {
       this.eventEmitter.emit('toggleScrollSync', payload!.active);
       return true;
     });
+    this.addCommand('markdown', 'setHeight', (payload) => {
+      const { height } = payload!;
+      
+      if (height === 'min') {
+        // Restore original height
+        this.setHeight(this.options.height || '300px');
+      } else if (height === 'medium') {
+        this.setHeight('600px');
+      } else if (height === 'full') {
+        this.setHeight(`${window.innerHeight - 100}px`);
+      }
+      return true;
+    });
+    this.addCommand('wysiwyg', 'setHeight', (payload) => {
+      const { height } = payload!;
+      
+      if (height === 'min') {
+        // Restore original height
+        this.setHeight(this.options.height || '300px');
+      } else if (height === 'medium') {
+        this.setHeight('600px');
+      } else if (height === 'full') {
+        this.setHeight(`${window.innerHeight - 100}px`);
+      }
+      return true;
+    });
     addPluginCommands('markdown', mdCommands);
     addPluginCommands('wysiwyg', wwCommands);
   }
