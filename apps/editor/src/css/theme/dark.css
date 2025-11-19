@@ -72,25 +72,13 @@
 .toastui-editor-dark .toastui-editor-mode-switch .tab-item {
   border-color: #393b42;
   background-color: #232428;
-  color: #9da2b1;
+  color: #757a86;
 }
 
 .toastui-editor-dark .toastui-editor-mode-switch .tab-item.active {
-  background-color: #67ccff;
-  border-color: #67ccff;
-  color: #121212;
-}
-
-.toastui-editor-dark .toastui-editor-mode-switch-theme-button {
-  border-color: #393b42;
-  background-color: #1b1c20;
-  color: #9da2b1;
-}
-
-.toastui-editor-dark .toastui-editor-mode-switch-theme-button.active {
-  background-color: #67ccff;
-  border-color: #67ccff;
-  color: #121212;
+  border-top-color: #121212;
+  background-color: #121212;
+  color: #eee;
 }
 
 .toastui-editor-dark .toastui-editor-popup,
