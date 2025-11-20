@@ -3,8 +3,8 @@ import {
   WRAPPER_CLASS_NAME,
   INPUT_CLASS_NANE,
   LIST_CLASS_NAME,
-} from '@/nodeViews/languageSelectBox';
-import { cls } from '@/utils/dom';
+} from '@plugin/nodeViews/languageSelectBox';
+import { cls } from '@plugin/utils/dom';
 import type { Emitter } from '@toast-ui/editor';
 import '@testing-library/jest-dom';
 

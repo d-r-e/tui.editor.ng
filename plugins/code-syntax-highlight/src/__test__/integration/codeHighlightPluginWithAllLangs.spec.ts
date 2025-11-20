@@ -1,7 +1,7 @@
 import { source } from 'common-tags';
 
 import Editor from '@toast-ui/editor';
-import codeSyntaxHighlightPlugin from '@/indexAll';
+import codeSyntaxHighlightPlugin from '@plugin/indexAll';
 
 describe('codeSyntaxHighlightPlugin', () => {
   let container: HTMLElement, mdPreview: HTMLElement, wwEditor: HTMLElement, editor: Editor;

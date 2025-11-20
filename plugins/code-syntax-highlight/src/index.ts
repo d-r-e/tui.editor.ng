@@ -1,6 +1,6 @@
-import { codeSyntaxHighlightPlugin } from '@/plugin';
+import { codeSyntaxHighlightPlugin } from '@plugin/plugin';
 
-import '@/css/plugin.css';
+import '@plugin/css/plugin.css';
 
 // Prevent to highlight all code elements automatically.
 // @link https://prismjs.com/docs/Prism.html#.manual

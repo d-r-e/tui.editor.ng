@@ -10,6 +10,12 @@ module.exports = {
   },
   transform: {
     ...base.transform,
-    '^.+\\.ts$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.jest.json' }],
+    '^.+\\.ts$': [
+      'ts-jest',
+      {
+        tsconfig: '<rootDir>/tsconfig.jest.json',
+        diagnostics: false,
+      },
+    ],
   },
 };

@@ -5,7 +5,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
+      "@plugin/*": ["src/*"],
       "@t/*": ["types/*"]
     },
     "typeRoots": ["./types", "node_modules/@types", "../../node_modules/@types"],

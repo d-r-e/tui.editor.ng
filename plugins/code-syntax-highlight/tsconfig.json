@@ -6,7 +6,7 @@
     "baseUrl": ".",
     "importHelpers": false,
     "paths": {
-      "@/*": ["src/*"],
+      "@plugin/*": ["src/*"],
       "@t/*": ["types/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable"]

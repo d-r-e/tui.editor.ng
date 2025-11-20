@@ -4,7 +4,7 @@
  */
 import '@testing-library/jest-dom';
 import Editor from '@toast-ui/editor';
-import umlPlugin from '@/index';
+import umlPlugin from '@plugin/index';
 
 function removeDataAttr(html: string) {
   return html

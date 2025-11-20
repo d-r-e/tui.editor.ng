@@ -21,6 +21,16 @@
         >here</a>.
     </div>
     <div class="code-html tui-doc-contents">
+      <p class="tui-doc-description">
+        Choose which mode the editor starts in. The new <code>markdown-only</code> option hides the
+        preview pane and only shows the Markdown editor.
+      </p>
+      <label for="start-mode">Start mode</label>
+      <select id="start-mode">
+        <option value="markdown">Markdown (split preview)</option>
+        <option value="markdown-only">Markdown Only</option>
+        <option value="wysiwyg" selected>WYSIWYG</option>
+      </select>
       <div id="editor"></div>
     </div>
     <!-- Added to check demo page in Internet Explorer -->
@@ -29,11 +39,27 @@
     <!-- Editor -->
     <script src="../dist/cdn/toastui-editor-all.js"></script>
     <script type="text/babel" class="code-js">
+      const modeSelect = document.querySelector('#start-mode');
+      const modeOptions = {
+        markdown: { initialEditType: 'markdown', previewStyle: 'vertical' },
+        'markdown-only': { initialEditType: 'markdown', previewStyle: 'markdown-only' },
+        wysiwyg: { initialEditType: 'wysiwyg', previewStyle: 'vertical' }
+      };
+      const { initialEditType, previewStyle } = modeOptions[modeSelect.value];
+
       const editor = new toastui.Editor({
         el: document.querySelector('#editor'),
         height: '500px',
         initialValue: content,
-        initialEditType: 'wysiwyg'
+        initialEditType,
+        previewStyle
+      });
+
+      modeSelect.addEventListener('change', event => {
+        const { initialEditType: editType, previewStyle: style } = modeOptions[event.target.value];
+
+        editor.changeMode(editType === 'wysiwyg' ? 'wysiwyg' : 'markdown');
+        editor.changePreviewStyle(style);
       });
     </script>
   </body>

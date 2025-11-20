@@ -12,17 +12,14 @@ function getPopUpElement() {
 }
 
 function fireMousemoveEvent(el: HTMLElement, x: number, y: number) {
-  const event = new MouseEvent('mousemove', {
+  fireEvent.mouseMove(el, {
     bubbles: true,
     cancelable: true,
+    clientX: x,
+    clientY: y,
+    pageX: x,
+    pageY: y,
   });
-
-  // @ts-ignore
-  event.pageX = x;
-  // @ts-ignore
-  event.pageY = y;
-
-  fireEvent(el, event);
 }
 
 function fireMouseoverEvent(el: HTMLElement) {

@@ -3,7 +3,7 @@ import type { Decoration } from 'prosemirror-view';
 
 import isString from 'tui-code-snippet/type/isString';
 
-import { flatten } from '@/utils/common';
+import { flatten } from '@plugin/utils/common';
 
 import type { PluginContext } from '@toast-ui/editor';
 import { PrismJs } from '@t/index';

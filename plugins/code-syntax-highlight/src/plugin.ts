@@ -1,8 +1,8 @@
 import isFunction from 'tui-code-snippet/type/isFunction';
 
-import { getHTMLRenderers } from '@/renderers/toHTMLRenderers';
-import { codeSyntaxHighlighting } from '@/plugins/codeSyntaxHighlighting';
-import { createCodeSyntaxHighlightView } from '@/nodeViews/codeSyntaxHighlightView';
+import { getHTMLRenderers } from '@plugin/renderers/toHTMLRenderers';
+import { codeSyntaxHighlighting } from '@plugin/plugins/codeSyntaxHighlighting';
+import { createCodeSyntaxHighlightView } from '@plugin/nodeViews/codeSyntaxHighlightView';
 
 import type { PluginContext, PluginInfo } from '@toast-ui/editor';
 import { PluginOptions } from '@t/index';

@@ -4,8 +4,8 @@ import type { Node as ProsemirrorNode } from 'prosemirror-model';
 import isFunction from 'tui-code-snippet/type/isFunction';
 import addClass from 'tui-code-snippet/domUtil/addClass';
 
-import { cls } from '@/utils/dom';
-import { LanguageSelectBox } from '@/nodeViews/languageSelectBox';
+import { cls } from '@plugin/utils/dom';
+import { LanguageSelectBox } from '@plugin/nodeViews/languageSelectBox';
 import type { Emitter } from '@toast-ui/editor';
 
 type GetPos = (() => number) | boolean;

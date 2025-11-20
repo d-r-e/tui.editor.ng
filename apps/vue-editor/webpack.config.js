@@ -18,13 +18,13 @@ module.exports = {
     },
   },
   externals: {
-    '@toast-ui/editor': {
-      commonjs: '@toast-ui/editor',
-      commonjs2: '@toast-ui/editor',
+    '@darodrig/tui-editor-ng': {
+      commonjs: '@darodrig/tui-editor-ng',
+      commonjs2: '@darodrig/tui-editor-ng',
     },
-    '@toast-ui/editor/dist/toastui-editor-viewer': {
-      commonjs: '@toast-ui/editor/dist/toastui-editor-viewer',
-      commonjs2: '@toast-ui/editor/dist/toastui-editor-viewer',
+    '@darodrig/tui-editor-ng/dist/toastui-editor-viewer': {
+      commonjs: '@darodrig/tui-editor-ng/dist/toastui-editor-viewer',
+      commonjs2: '@darodrig/tui-editor-ng/dist/toastui-editor-viewer',
     },
   },
   module: {

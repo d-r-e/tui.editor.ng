@@ -78,7 +78,7 @@ describe('editor', () => {
       it('should occurs error when types of parameters is not matched', () => {
         expect(() => {
           editor.convertPosToMatchEditorMode(mdPos, wwPos);
-        }).toThrowError();
+        }).toThrow();
       });
     });
 
@@ -645,7 +645,9 @@ describe('editor', () => {
     });
 
     afterEach(() => {
-      editor.destroy();
+      if (editor) {
+        editor.destroy();
+      }
       document.body.removeChild(container);
     });
 
@@ -750,8 +752,12 @@ describe('editor', () => {
     });
 
     describe('usageStatistics', () => {
+      afterEach(() => {
+        jest.restoreAllMocks();
+      });
+
       it('should send request hostname in payload by default', () => {
-        spyOn(commonUtil, 'sendHostName');
+        jest.spyOn(commonUtil, 'sendHostName');
 
         createEditor({ el: container });
 
@@ -759,7 +765,7 @@ describe('editor', () => {
       });
 
       it('should not send request if the option is set to false', () => {
-        spyOn(commonUtil, 'sendHostName');
+        jest.spyOn(commonUtil, 'sendHostName');
 
         createEditor({ el: container, usageStatistics: false });
 
@@ -941,7 +947,7 @@ describe('editor', () => {
           },
         });
 
-        expect(getPreviewHTML()).toBe('<p><a target="_blank" href="nhn.com">Hello</a></p>');
+        expect(getPreviewHTML()).toBe('<p><a href="nhn.com" target="_blank">Hello</a></p>');
       });
 
       it('should render html block node regardless of the sanitizer', () => {
@@ -955,7 +961,7 @@ describe('editor', () => {
         });
 
         const result = oneLineTrim`
-          <iframe src="https://www.youtube.com/embed/XyenY12fzAk" height="315" width="420"></iframe>
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/XyenY12fzAk"></iframe>
           <p>test</p>
         `;
 

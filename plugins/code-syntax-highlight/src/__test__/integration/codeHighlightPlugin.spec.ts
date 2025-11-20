@@ -1,7 +1,7 @@
 import { source } from 'common-tags';
 
 import Editor from '@toast-ui/editor';
-import codeSyntaxHighlightPlugin from '@/index';
+import codeSyntaxHighlightPlugin from '@plugin/index';
 
 import Prism from 'prismjs';
 import 'prismjs/components/prism-yaml.js';

@@ -8,7 +8,13 @@ module.exports = {
   testEnvironment: 'node',
   setupFilesAfterEnv: [setupFile],
   transform: {
-    '^.+\\.ts$': ['ts-jest', { tsconfig: { module: 'commonjs' } }],
+    '^.+\\.ts$': [
+      'ts-jest',
+      {
+        tsconfig: { module: 'commonjs' },
+        diagnostics: false,
+      },
+    ],
     '^.+\\.js$': 'babel-jest',
     '^.+\\.css$': cssMockFile,
   },

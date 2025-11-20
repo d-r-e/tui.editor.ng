@@ -9,9 +9,9 @@ const optionDefinitions = [
 const options = commandLineArgs(optionDefinitions);
 
 const pkgMap = {
-  editor: '@toast-ui/editor',
-  react: '@toast-ui/react-editor',
-  vue: '@toast-ui/vue-editor',
+  editor: '@darodrig/tui-editor-ng',
+  react: '@darodrig/react-editor-ng',
+  vue: '@darodrig/vue-editor-ng',
   toastmark: '@toast-ui/toastmark',
   chart: '@toast-ui/editor-plugin-chart',
   color: '@toast-ui/editor-plugin-color-syntax',

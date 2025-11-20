@@ -48,9 +48,9 @@ module.exports = (env) => {
     externals: [
       {
         '../editorCore': {
-          commonjs: '@toast-ui/editor',
-          commonjs2: '@toast-ui/editor',
-          amd: '@toast-ui/editor',
+          commonjs: '@darodrig/tui-editor-ng',
+          commonjs2: '@darodrig/tui-editor-ng',
+          amd: '@darodrig/tui-editor-ng',
           root: ['toastui', 'Editor'],
         },
       },
@@ -91,6 +91,7 @@ module.exports = (env) => {
         extensions: ['js', 'ts'],
         exclude: ['node_modules', 'dist'],
         failOnError: true,
+        overrideConfigFile: path.resolve(__dirname, '../../../.eslintrc.js'),
       }),
     ],
     optimization: getOptimizationConfig(minify),

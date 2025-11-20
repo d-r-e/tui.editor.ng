@@ -38,6 +38,6 @@ export default [
       sourcemap: false,
     },
     plugins: [vue({}), commonjs(), nodeResolve(), transpile(), banner(bannerText)],
-    external: ['vue', '@toast-ui/editor', '@toast-ui/editor/dist/toastui-editor-viewer'],
+    external: ['vue', '@darodrig/tui-editor-ng', '@darodrig/tui-editor-ng/dist/toastui-editor-viewer'],
   },
 ];

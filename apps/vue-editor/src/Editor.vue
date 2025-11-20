@@ -2,7 +2,7 @@
   <div ref="toastuiEditor"></div>
 </template>
 <script>
-import Editor from '@toast-ui/editor';
+import Editor from '@darodrig/tui-editor-ng';
 import { optionsMixin } from './mixin/option';
 
 export default {

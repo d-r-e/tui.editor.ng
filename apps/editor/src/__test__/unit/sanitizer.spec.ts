@@ -100,9 +100,16 @@ describe('sanitizeHTML', () => {
         registerTagWhitelistIfPossible('iframe');
 
         expect(sanitizeHTML('<iframe src=""></iframe>')).toBe('<iframe src=""></iframe>');
-        expect(sanitizeHTML('<embed type="image/jpg" src="">')).toBe(
-          '<embed src="" type="image/jpg">'
-        );
+        const embedHTML = sanitizeHTML('<embed type="image/jpg" src="">');
+        const container = document.createElement('div');
+
+        container.innerHTML = embedHTML;
+
+        const embed = container.firstElementChild as HTMLElement | null;
+
+        expect(embed?.tagName.toLowerCase()).toBe('embed');
+        expect(embed?.getAttribute('src')).toBe('');
+        expect(embed?.getAttribute('type')).toBe('image/jpg');
       });
 
       it('should remove the tags in case that the tag name cannot be white list', () => {

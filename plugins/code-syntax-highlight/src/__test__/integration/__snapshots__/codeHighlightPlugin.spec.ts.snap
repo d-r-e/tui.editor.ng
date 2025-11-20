@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`codeSyntaxHighlightPlugin should render codeblock element with no language info in markdown preview 1`] = `
 <pre class="toastui-editor-md-preview-highlight">

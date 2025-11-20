@@ -1,10 +1,10 @@
 import Prism from 'prismjs';
 import type { PluginContext, PluginInfo } from '@toast-ui/editor';
-import { codeSyntaxHighlightPlugin } from '@/plugin';
+import { codeSyntaxHighlightPlugin } from '@plugin/plugin';
 import { PrismJs } from '@t/index';
 
-import '@/prismjs-langs';
-import '@/css/plugin.css';
+import '@plugin/prismjs-langs';
+import '@plugin/css/plugin.css';
 
 // Prevent to highlight all code elements automatically.
 // @link https://prismjs.com/docs/Prism.html#.manual

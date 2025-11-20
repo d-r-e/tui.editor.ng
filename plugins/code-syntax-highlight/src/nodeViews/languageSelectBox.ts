@@ -5,7 +5,7 @@ import hasClass from 'tui-code-snippet/domUtil/hasClass';
 import toArray from 'tui-code-snippet/collection/toArray';
 import inArray from 'tui-code-snippet/array/inArray';
 
-import { isPositionInBox, removeNode, cls } from '@/utils/dom';
+import { isPositionInBox, removeNode, cls } from '@plugin/utils/dom';
 import type { Emitter } from '@toast-ui/editor';
 
 export const WRAPPER_CLASS_NAME = 'code-block-language';

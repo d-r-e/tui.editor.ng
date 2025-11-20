@@ -189,6 +189,7 @@ module.exports = (env) => {
             extensions: ['js', 'ts'],
             exclude: ['node_modules', 'dist'],
             failOnError: isProduction,
+            overrideConfigFile: path.resolve(__dirname, '../../.eslintrc.js'),
           }),
         ],
         externals: [
